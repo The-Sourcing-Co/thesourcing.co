@@ -56,7 +56,6 @@ button{
   margin:auto;
 }
 
-
 /* NAVIGATION */
 
 .nav{
@@ -91,7 +90,6 @@ button{
 .navlinks a:hover{
   color:var(--gold);
 }
-
 
 /* HERO */
 
@@ -181,7 +179,6 @@ h1{
   border-color:var(--gold);
 }
 
-
 /* HERO ART */
 
 .hero-art{
@@ -249,8 +246,7 @@ h1{
   color:#5d574e;
 }
 
-
-/* MOVING STRIP */
+/* MARQUEE */
 
 .marquee{
   border-top:1px solid var(--line);
@@ -282,7 +278,6 @@ h1{
     transform:translateX(-50%);
   }
 }
-
 
 /* SECTIONS */
 
@@ -318,7 +313,6 @@ h2{
   color:var(--muted);
   font-size:17px;
 }
-
 
 /* SERVICES */
 
@@ -362,8 +356,7 @@ h2{
   margin:0;
 }
 
-
-/* DARK STATEMENT */
+/* STATEMENT */
 
 .statement{
   background:var(--ink);
@@ -389,7 +382,6 @@ h2{
   margin-top:30px;
   font-size:16px;
 }
-
 
 /* PROCESS */
 
@@ -424,7 +416,6 @@ h2{
   margin:0;
 }
 
-
 /* CTA */
 
 .cta{
@@ -447,7 +438,6 @@ h2{
   margin-top:15px;
 }
 
-
 /* FOOTER */
 
 footer{
@@ -463,10 +453,7 @@ footer .footer-logo{
   color:var(--ink);
 }
 
-
-/* =========================
-   SOURCING CATALOGUE MODAL
-   ========================= */
+/* CATALOGUE POPUP */
 
 .catalogue-overlay{
   position:fixed;
@@ -475,20 +462,14 @@ footer .footer-logo{
   background:rgba(23,23,21,.72);
   backdrop-filter:blur(7px);
   -webkit-backdrop-filter:blur(7px);
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   padding:25px;
-
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-
-  transition:
-    opacity .25s ease,
-    visibility .25s ease;
+  transition:opacity .25s ease,visibility .25s ease;
 }
 
 .catalogue-overlay.open{
@@ -502,10 +483,8 @@ footer .footer-logo{
   max-height:min(86vh,820px);
   background:var(--paper);
   box-shadow:0 30px 90px rgba(0,0,0,.3);
-
   display:flex;
   flex-direction:column;
-
   transform:translateY(20px) scale(.98);
   transition:transform .3s ease;
 }
@@ -514,18 +493,13 @@ footer .footer-logo{
   transform:translateY(0) scale(1);
 }
 
-
-/* catalogue header */
-
 .catalogue-header{
   flex-shrink:0;
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
   gap:25px;
-
   padding:32px 35px 25px;
-
   border-bottom:1px solid var(--line);
 }
 
@@ -570,13 +544,9 @@ footer .footer-logo{
   color:white;
 }
 
-
-/* catalogue scrolling area */
-
 .catalogue-body{
   overflow-y:auto;
   padding:25px 35px 35px;
-
   scrollbar-width:thin;
   scrollbar-color:var(--gold) transparent;
 }
@@ -585,14 +555,10 @@ footer .footer-logo{
   padding:13px 16px;
   background:#eee7da;
   border-left:2px solid var(--gold);
-
   color:#625d55;
   font-size:11px;
   margin-bottom:28px;
 }
-
-
-/* catalogue category */
 
 .catalogue-category{
   margin-bottom:35px;
@@ -603,10 +569,8 @@ footer .footer-logo{
   justify-content:space-between;
   align-items:baseline;
   gap:20px;
-
   padding-bottom:12px;
   border-bottom:1px solid var(--line);
-
   margin-bottom:15px;
 }
 
@@ -624,9 +588,6 @@ footer .footer-logo{
   font-size:9px;
 }
 
-
-/* catalogue items */
-
 .catalogue-items{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -637,11 +598,9 @@ footer .footer-logo{
   background:white;
   border:1px solid #e5ded2;
   padding:18px;
-
   display:flex;
   justify-content:space-between;
   gap:20px;
-
   transition:.2s;
 }
 
@@ -661,24 +620,13 @@ footer .footer-logo{
   font-size:11px;
 }
 
-.catalogue-item-arrow{
-  color:var(--gold);
-  font-size:15px;
-}
-
-
-/* catalogue footer */
-
 .catalogue-footer{
   flex-shrink:0;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:20px;
-
   padding:20px 35px;
-
   border-top:1px solid var(--line);
   background:#f1ebe1;
 }
@@ -693,8 +641,7 @@ footer .footer-logo{
   white-space:nowrap;
 }
 
-
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:850px){
 
@@ -731,6 +678,7 @@ footer .footer-logo{
 
 }
 
+/* MOBILE */
 
 @media(max-width:560px){
 
@@ -804,9 +752,6 @@ footer .footer-logo{
     margin-top:10px;
   }
 
-
-  /* mobile catalogue */
-
   .catalogue-overlay{
     padding:10px;
   }
@@ -845,12 +790,9 @@ footer .footer-logo{
 </style>
 </head>
 
-
 <body>
 
-
 <div class="wrap">
-
 
 <header class="nav">
 
@@ -876,11 +818,7 @@ footer .footer-logo{
 
 </header>
 
-
 <main>
-
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -927,7 +865,6 @@ footer .footer-logo{
 
   </div>
 
-
   <div class="hero-art" aria-hidden="true">
 
     <div class="art-main">
@@ -958,9 +895,6 @@ footer .footer-logo{
   </div>
 
 </section>
-
-
-<!-- MOVING STRIP -->
 
 <div class="marquee">
 
@@ -1010,9 +944,6 @@ footer .footer-logo{
 
 </div>
 
-
-<!-- SERVICES -->
-
 <section id="services">
 
   <div class="section-head">
@@ -1039,7 +970,6 @@ footer .footer-logo{
 
   </div>
 
-
   <div class="services">
 
     <article class="service">
@@ -1059,7 +989,6 @@ footer .footer-logo{
 
     </article>
 
-
     <article class="service">
 
       <div class="service-num">
@@ -1077,7 +1006,6 @@ footer .footer-logo{
 
     </article>
 
-
     <article class="service">
 
       <div class="service-num">
@@ -1094,7 +1022,6 @@ footer .footer-logo{
       </p>
 
     </article>
-
 
     <article class="service">
 
@@ -1117,9 +1044,6 @@ footer .footer-logo{
 
 </section>
 
-
-<!-- DARK STATEMENT -->
-
 <section class="statement">
 
   <div class="kicker">
@@ -1140,9 +1064,6 @@ footer .footer-logo{
   </p>
 
 </section>
-
-
-<!-- PROCESS -->
 
 <section id="process">
 
@@ -1169,7 +1090,6 @@ footer .footer-logo{
 
   </div>
 
-
   <div class="process">
 
     <div class="process-step">
@@ -1189,7 +1109,6 @@ footer .footer-logo{
 
     </div>
 
-
     <div class="process-step">
 
       <div class="num">
@@ -1206,7 +1125,6 @@ footer .footer-logo{
       </p>
 
     </div>
-
 
     <div class="process-step">
 
@@ -1225,7 +1143,6 @@ footer .footer-logo{
 
     </div>
 
-
     <div class="process-step">
 
       <div class="num">
@@ -1242,7 +1159,6 @@ footer .footer-logo{
       </p>
 
     </div>
-
 
     <div class="process-step">
 
@@ -1263,9 +1179,6 @@ footer .footer-logo{
   </div>
 
 </section>
-
-
-<!-- CTA -->
 
 <section class="cta" id="contact">
 
@@ -1302,9 +1215,7 @@ footer .footer-logo{
 
 </section>
 
-
 </main>
-
 
 <footer>
 
@@ -1318,13 +1229,10 @@ footer .footer-logo{
 
 </footer>
 
-
 </div>
 
 
-<!-- =========================
-     SOURCING CATALOGUE
-     ========================= -->
+<!-- CATALOGUE POPUP -->
 
 <div
   class="catalogue-overlay"
@@ -1338,7 +1246,6 @@ footer .footer-logo{
     aria-modal="true"
     aria-labelledby="catalogueTitle"
   >
-
 
     <div class="catalogue-header">
 
@@ -1364,7 +1271,6 @@ footer .footer-logo{
 
       </div>
 
-
       <button
         class="close-catalogue"
         type="button"
@@ -1378,7 +1284,6 @@ footer .footer-logo{
 
 
     <div class="catalogue-body">
-
 
       <div class="catalogue-note">
         EXAMPLES ONLY · Availability, specifications,
@@ -1403,58 +1308,73 @@ footer .footer-logo{
 
         </div>
 
-
         <div class="catalogue-items">
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Employee Welcome Kits
               </div>
+
               <div class="catalogue-item-detail">
                 Notebooks · bottles · stationery · custom packaging
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Festive Gift Hampers
               </div>
+
               <div class="catalogue-item-detail">
                 Gourmet items · chocolates · dry fruits · packaging
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Client Gift Boxes
               </div>
+
               <div class="catalogue-item-detail">
                 Curated gifts · premium packaging · custom branding
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Joining & Onboarding Kits
               </div>
+
               <div class="catalogue-item-detail">
                 Office essentials · branded items · presentation boxes
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
         </div>
@@ -1462,7 +1382,7 @@ footer .footer-logo{
       </div>
 
 
-      <!-- MERCHANDISE -->
+      <!-- BRANDED MERCHANDISE -->
 
       <div class="catalogue-category">
 
@@ -1478,84 +1398,107 @@ footer .footer-logo{
 
         </div>
 
-
         <div class="catalogue-items">
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Branded Tote Bags
               </div>
+
               <div class="catalogue-item-detail">
                 Canvas · cotton · non-woven · custom printing
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Bottles & Drinkware
               </div>
+
               <div class="catalogue-item-detail">
                 Steel · insulated · tumblers · logo branding
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Notebooks & Stationery
               </div>
+
               <div class="catalogue-item-detail">
                 Journals · planners · pens · custom covers
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Desk & Office Merchandise
               </div>
+
               <div class="catalogue-item-detail">
                 Organisers · desk accessories · utility products
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Apparel & Accessories
               </div>
+
               <div class="catalogue-item-detail">
                 T-shirts · caps · jackets · customised wear
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Event Giveaways
               </div>
+
               <div class="catalogue-item-detail">
                 Promotional products · badges · accessories
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
         </div>
@@ -1579,58 +1522,73 @@ footer .footer-logo{
 
         </div>
 
-
         <div class="catalogue-items">
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Custom Gift Boxes
               </div>
+
               <div class="catalogue-item-detail">
                 Rigid boxes · folding cartons · magnetic boxes
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Branded Paper Bags
               </div>
+
               <div class="catalogue-item-detail">
                 Kraft · art paper · cotton handles · logo printing
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Labels & Stickers
               </div>
+
               <div class="catalogue-item-detail">
                 Product labels · seals · branding stickers
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Inserts & Cards
               </div>
+
               <div class="catalogue-item-detail">
                 Thank-you cards · product inserts · instruction cards
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
         </div>
@@ -1638,7 +1596,7 @@ footer .footer-logo{
       </div>
 
 
-      <!-- EVENTS -->
+      <!-- EVENT SUPPLIES -->
 
       <div class="catalogue-category">
 
@@ -1654,58 +1612,73 @@ footer .footer-logo{
 
         </div>
 
-
         <div class="catalogue-items">
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Event Giveaways
               </div>
+
               <div class="catalogue-item-detail">
                 Branded merchandise · kits · promotional items
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Printed Event Materials
               </div>
+
               <div class="catalogue-item-detail">
                 Signage · cards · menus · programmes
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Conference Kits
               </div>
+
               <div class="catalogue-item-detail">
                 Folders · badges · stationery · attendee kits
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
 
           <div class="catalogue-item">
+
             <div>
+
               <div class="catalogue-item-name">
                 Custom Event Requirements
               </div>
+
               <div class="catalogue-item-detail">
                 Tell us what you need — we'll look for it.
               </div>
+
             </div>
-            <div class="catalogue-item-arrow">↗</div>
+
           </div>
 
         </div>
@@ -1713,7 +1686,7 @@ footer .footer-logo{
       </div>
 
 
-      <!-- CUSTOM -->
+      <!-- SOMETHING ELSE -->
 
       <div class="catalogue-category">
 
@@ -1745,10 +1718,6 @@ footer .footer-logo{
 
           </div>
 
-          <div class="catalogue-item-arrow">
-            ↗
-          </div>
-
         </div>
 
       </div>
@@ -1756,6 +1725,8 @@ footer .footer-logo{
 
     </div>
 
+
+    <!-- POPUP FOOTER -->
 
     <div class="catalogue-footer">
 
@@ -1775,7 +1746,6 @@ footer .footer-logo{
       </a>
 
     </div>
-
 
   </div>
 
