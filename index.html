@@ -3,10 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>The Sourcing Co. | B2B Sourcing & Procurement</title>
-<meta name="description" content="The Sourcing Co. helps businesses source corporate gifting, branded merchandise, packaging, event supplies and customised business requirements.">
+
+<meta name="description"
+content="The Sourcing Co. helps businesses source corporate gifting, branded merchandise, packaging, event supplies and customised business requirements.">
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
 :root{
@@ -16,11 +20,16 @@
   --line:#d8d0c3;
   --muted:#716d65;
   --gold:#9a7440;
+  --gold-light:#c6a16b;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -30,12 +39,25 @@ body{
   line-height:1.55;
 }
 
-a{color:inherit}
+body.modal-open{
+  overflow:hidden;
+}
+
+a{
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
 
 .wrap{
   width:min(1180px,calc(100% - 48px));
   margin:auto;
 }
+
+
+/* NAVIGATION */
 
 .nav{
   height:88px;
@@ -70,6 +92,9 @@ a{color:inherit}
   color:var(--gold);
 }
 
+
+/* HERO */
+
 .hero{
   min-height:calc(100vh - 88px);
   display:grid;
@@ -77,6 +102,7 @@ a{color:inherit}
   align-items:center;
   gap:70px;
   padding:85px 0 100px;
+  border:0;
 }
 
 .kicker{
@@ -130,6 +156,8 @@ h1{
   font-size:13px;
   font-weight:600;
   transition:.25s;
+  border:0;
+  cursor:pointer;
 }
 
 .button:hover{
@@ -140,9 +168,21 @@ h1{
 .textlink{
   font-size:13px;
   text-decoration:none;
+  border:0;
   border-bottom:1px solid var(--ink);
-  padding-bottom:3px;
+  padding:0 0 3px;
+  background:none;
+  color:var(--ink);
+  cursor:pointer;
 }
+
+.textlink:hover{
+  color:var(--gold);
+  border-color:var(--gold);
+}
+
+
+/* HERO ART */
 
 .hero-art{
   position:relative;
@@ -209,6 +249,9 @@ h1{
   color:#5d574e;
 }
 
+
+/* MOVING STRIP */
+
 .marquee{
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -239,6 +282,9 @@ h1{
     transform:translateX(-50%);
   }
 }
+
+
+/* SECTIONS */
 
 section{
   padding:110px 0;
@@ -272,6 +318,9 @@ h2{
   color:var(--muted);
   font-size:17px;
 }
+
+
+/* SERVICES */
 
 .services{
   display:grid;
@@ -313,6 +362,9 @@ h2{
   margin:0;
 }
 
+
+/* DARK STATEMENT */
+
 .statement{
   background:var(--ink);
   color:#f6f0e7;
@@ -337,6 +389,9 @@ h2{
   margin-top:30px;
   font-size:16px;
 }
+
+
+/* PROCESS */
 
 .process{
   display:grid;
@@ -369,6 +424,9 @@ h2{
   margin:0;
 }
 
+
+/* CTA */
+
 .cta{
   text-align:center;
   padding:130px 0;
@@ -389,6 +447,9 @@ h2{
   margin-top:15px;
 }
 
+
+/* FOOTER */
+
 footer{
   padding:28px 0 45px;
   display:flex;
@@ -401,6 +462,239 @@ footer .footer-logo{
   font-weight:700;
   color:var(--ink);
 }
+
+
+/* =========================
+   SOURCING CATALOGUE MODAL
+   ========================= */
+
+.catalogue-overlay{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:rgba(23,23,21,.72);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:25px;
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease;
+}
+
+.catalogue-overlay.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.catalogue{
+  width:min(920px,100%);
+  max-height:min(86vh,820px);
+  background:var(--paper);
+  box-shadow:0 30px 90px rgba(0,0,0,.3);
+
+  display:flex;
+  flex-direction:column;
+
+  transform:translateY(20px) scale(.98);
+  transition:transform .3s ease;
+}
+
+.catalogue-overlay.open .catalogue{
+  transform:translateY(0) scale(1);
+}
+
+
+/* catalogue header */
+
+.catalogue-header{
+  flex-shrink:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:25px;
+
+  padding:32px 35px 25px;
+
+  border-bottom:1px solid var(--line);
+}
+
+.catalogue-kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:10px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.catalogue-title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:38px;
+  line-height:1;
+  font-weight:500;
+  margin:0;
+}
+
+.catalogue-description{
+  color:var(--muted);
+  font-size:12px;
+  max-width:540px;
+  margin:10px 0 0;
+}
+
+.close-catalogue{
+  flex-shrink:0;
+  width:38px;
+  height:38px;
+  border:1px solid var(--line);
+  background:transparent;
+  cursor:pointer;
+  font-size:20px;
+  line-height:1;
+  color:var(--ink);
+}
+
+.close-catalogue:hover{
+  background:var(--ink);
+  color:white;
+}
+
+
+/* catalogue scrolling area */
+
+.catalogue-body{
+  overflow-y:auto;
+  padding:25px 35px 35px;
+
+  scrollbar-width:thin;
+  scrollbar-color:var(--gold) transparent;
+}
+
+.catalogue-note{
+  padding:13px 16px;
+  background:#eee7da;
+  border-left:2px solid var(--gold);
+
+  color:#625d55;
+  font-size:11px;
+  margin-bottom:28px;
+}
+
+
+/* catalogue category */
+
+.catalogue-category{
+  margin-bottom:35px;
+}
+
+.category-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:20px;
+
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+
+  margin-bottom:15px;
+}
+
+.category-heading h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:24px;
+  font-weight:500;
+  margin:0;
+}
+
+.category-heading span{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:9px;
+}
+
+
+/* catalogue items */
+
+.catalogue-items{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.catalogue-item{
+  background:white;
+  border:1px solid #e5ded2;
+  padding:18px;
+
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+
+  transition:.2s;
+}
+
+.catalogue-item:hover{
+  border-color:#bca681;
+  transform:translateY(-2px);
+}
+
+.catalogue-item-name{
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:3px;
+}
+
+.catalogue-item-detail{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.catalogue-item-arrow{
+  color:var(--gold);
+  font-size:15px;
+}
+
+
+/* catalogue footer */
+
+.catalogue-footer{
+  flex-shrink:0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+
+  padding:20px 35px;
+
+  border-top:1px solid var(--line);
+  background:#f1ebe1;
+}
+
+.catalogue-footer p{
+  color:var(--muted);
+  font-size:11px;
+  margin:0;
+}
+
+.catalogue-footer a{
+  white-space:nowrap;
+}
+
+
+/* MOBILE */
 
 @media(max-width:850px){
 
@@ -430,7 +724,13 @@ footer .footer-logo{
   .process{
     grid-template-columns:1fr 1fr;
   }
+
+  .catalogue-items{
+    grid-template-columns:1fr 1fr;
+  }
+
 }
+
 
 @media(max-width:560px){
 
@@ -503,13 +803,54 @@ footer .footer-logo{
   footer div+div{
     margin-top:10px;
   }
+
+
+  /* mobile catalogue */
+
+  .catalogue-overlay{
+    padding:10px;
+  }
+
+  .catalogue{
+    max-height:94vh;
+  }
+
+  .catalogue-header{
+    padding:24px 20px 20px;
+  }
+
+  .catalogue-title{
+    font-size:31px;
+  }
+
+  .catalogue-body{
+    padding:20px;
+  }
+
+  .catalogue-items{
+    grid-template-columns:1fr;
+  }
+
+  .catalogue-footer{
+    padding:17px 20px;
+    display:block;
+  }
+
+  .catalogue-footer .button{
+    margin-top:12px;
+  }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <div class="wrap">
+
 
 <header class="nav">
 
@@ -518,9 +859,19 @@ footer .footer-logo{
   </div>
 
   <nav class="navlinks">
-    <a href="#services">What we source</a>
-    <a href="#process">How it works</a>
-    <a href="#contact">Contact</a>
+
+    <a href="#services">
+      What we source
+    </a>
+
+    <a href="#process">
+      How it works
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
   </nav>
 
 </header>
@@ -528,7 +879,10 @@ footer .footer-logo{
 
 <main>
 
-<section class="hero" style="border:0">
+
+<!-- HERO -->
+
+<section class="hero">
 
   <div>
 
@@ -551,13 +905,23 @@ footer .footer-logo{
 
     <div class="ctas">
 
-      <a class="button" href="#contact">
-        Start a requirement <span>↗</span>
+      <a
+        class="button"
+        href="https://tally.so/r/rjxZ45"
+        target="_blank"
+        rel="noopener"
+      >
+        Start a requirement
+        <span>↗</span>
       </a>
 
-      <a class="textlink" href="#services">
+      <button
+        class="textlink"
+        type="button"
+        onclick="openCatalogue()"
+      >
         Explore what we source
-      </a>
+      </button>
 
     </div>
 
@@ -596,7 +960,9 @@ footer .footer-logo{
 </section>
 
 
-<div class="marquee" aria-hidden="true">
+<!-- MOVING STRIP -->
+
+<div class="marquee">
 
   <div class="marquee-inner">
 
@@ -644,6 +1010,8 @@ footer .footer-logo{
 
 </div>
 
+
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -750,6 +1118,8 @@ footer .footer-logo{
 </section>
 
 
+<!-- DARK STATEMENT -->
+
 <section class="statement">
 
   <div class="kicker">
@@ -771,6 +1141,8 @@ footer .footer-logo{
 
 </section>
 
+
+<!-- PROCESS -->
 
 <section id="process">
 
@@ -893,6 +1265,8 @@ footer .footer-logo{
 </section>
 
 
+<!-- CTA -->
+
 <section class="cta" id="contact">
 
   <div class="kicker" style="justify-content:center">
@@ -909,11 +1283,25 @@ footer .footer-logo{
     it from there.
   </p>
 
-  <a class="button" href="mailto:thesourcing.co26@gmail.com">
-    Get in touch <span>↗</span>
+  <a
+    class="button"
+    href="https://tally.so/r/rjxZ45"
+    target="_blank"
+    rel="noopener"
+  >
+    Start a requirement
+    <span>↗</span>
   </a>
 
+  <p style="font-size:12px;margin-top:25px">
+    Prefer email?
+    <a href="mailto:thesourcing.co26@gmail.com">
+      thesourcing.co26@gmail.com
+    </a>
+  </p>
+
 </section>
+
 
 </main>
 
@@ -930,7 +1318,522 @@ footer .footer-logo{
 
 </footer>
 
+
 </div>
+
+
+<!-- =========================
+     SOURCING CATALOGUE
+     ========================= -->
+
+<div
+  class="catalogue-overlay"
+  id="catalogueOverlay"
+  onclick="closeCatalogueFromBackground(event)"
+>
+
+  <div
+    class="catalogue"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="catalogueTitle"
+  >
+
+
+    <div class="catalogue-header">
+
+      <div>
+
+        <div class="catalogue-kicker">
+          What we source
+        </div>
+
+        <h2
+          class="catalogue-title"
+          id="catalogueTitle"
+        >
+          A few things<br>
+          we can find.
+        </h2>
+
+        <p class="catalogue-description">
+          These are examples of the kinds of products
+          and requirements we can source. If you don't
+          see what you're looking for, ask us anyway.
+        </p>
+
+      </div>
+
+
+      <button
+        class="close-catalogue"
+        type="button"
+        onclick="closeCatalogue()"
+        aria-label="Close catalogue"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="catalogue-body">
+
+
+      <div class="catalogue-note">
+        EXAMPLES ONLY · Availability, specifications,
+        minimum quantities and pricing depend on the
+        requirement.
+      </div>
+
+
+      <!-- CORPORATE GIFTING -->
+
+      <div class="catalogue-category">
+
+        <div class="category-heading">
+
+          <h3>
+            Corporate Gifting
+          </h3>
+
+          <span>
+            Gifts · Kits · Hampers
+          </span>
+
+        </div>
+
+
+        <div class="catalogue-items">
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Employee Welcome Kits
+              </div>
+              <div class="catalogue-item-detail">
+                Notebooks · bottles · stationery · custom packaging
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Festive Gift Hampers
+              </div>
+              <div class="catalogue-item-detail">
+                Gourmet items · chocolates · dry fruits · packaging
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Client Gift Boxes
+              </div>
+              <div class="catalogue-item-detail">
+                Curated gifts · premium packaging · custom branding
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Joining & Onboarding Kits
+              </div>
+              <div class="catalogue-item-detail">
+                Office essentials · branded items · presentation boxes
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MERCHANDISE -->
+
+      <div class="catalogue-category">
+
+        <div class="category-heading">
+
+          <h3>
+            Branded Merchandise
+          </h3>
+
+          <span>
+            Custom · Promotional · Branded
+          </span>
+
+        </div>
+
+
+        <div class="catalogue-items">
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Branded Tote Bags
+              </div>
+              <div class="catalogue-item-detail">
+                Canvas · cotton · non-woven · custom printing
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Bottles & Drinkware
+              </div>
+              <div class="catalogue-item-detail">
+                Steel · insulated · tumblers · logo branding
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Notebooks & Stationery
+              </div>
+              <div class="catalogue-item-detail">
+                Journals · planners · pens · custom covers
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Desk & Office Merchandise
+              </div>
+              <div class="catalogue-item-detail">
+                Organisers · desk accessories · utility products
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Apparel & Accessories
+              </div>
+              <div class="catalogue-item-detail">
+                T-shirts · caps · jackets · customised wear
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Event Giveaways
+              </div>
+              <div class="catalogue-item-detail">
+                Promotional products · badges · accessories
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PACKAGING -->
+
+      <div class="catalogue-category">
+
+        <div class="category-heading">
+
+          <h3>
+            Packaging
+          </h3>
+
+          <span>
+            Presentation · Protection · Branding
+          </span>
+
+        </div>
+
+
+        <div class="catalogue-items">
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Custom Gift Boxes
+              </div>
+              <div class="catalogue-item-detail">
+                Rigid boxes · folding cartons · magnetic boxes
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Branded Paper Bags
+              </div>
+              <div class="catalogue-item-detail">
+                Kraft · art paper · cotton handles · logo printing
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Labels & Stickers
+              </div>
+              <div class="catalogue-item-detail">
+                Product labels · seals · branding stickers
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Inserts & Cards
+              </div>
+              <div class="catalogue-item-detail">
+                Thank-you cards · product inserts · instruction cards
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENTS -->
+
+      <div class="catalogue-category">
+
+        <div class="category-heading">
+
+          <h3>
+            Event Supplies
+          </h3>
+
+          <span>
+            Events · Launches · Experiences
+          </span>
+
+        </div>
+
+
+        <div class="catalogue-items">
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Event Giveaways
+              </div>
+              <div class="catalogue-item-detail">
+                Branded merchandise · kits · promotional items
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Printed Event Materials
+              </div>
+              <div class="catalogue-item-detail">
+                Signage · cards · menus · programmes
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Conference Kits
+              </div>
+              <div class="catalogue-item-detail">
+                Folders · badges · stationery · attendee kits
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+
+          <div class="catalogue-item">
+            <div>
+              <div class="catalogue-item-name">
+                Custom Event Requirements
+              </div>
+              <div class="catalogue-item-detail">
+                Tell us what you need — we'll look for it.
+              </div>
+            </div>
+            <div class="catalogue-item-arrow">↗</div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CUSTOM -->
+
+      <div class="catalogue-category">
+
+        <div class="category-heading">
+
+          <h3>
+            Something Else?
+          </h3>
+
+          <span>
+            Tell us what you need
+          </span>
+
+        </div>
+
+
+        <div class="catalogue-item">
+
+          <div>
+
+            <div class="catalogue-item-name">
+              Custom Sourcing Requirements
+            </div>
+
+            <div class="catalogue-item-detail">
+              If it isn't listed here, that doesn't mean
+              we can't source it.
+            </div>
+
+          </div>
+
+          <div class="catalogue-item-arrow">
+            ↗
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="catalogue-footer">
+
+      <p>
+        Don't see what you're looking for?
+        We may still be able to source it.
+      </p>
+
+      <a
+        class="button"
+        href="https://tally.so/r/rjxZ45"
+        target="_blank"
+        rel="noopener"
+      >
+        Tell us what you need
+        <span>↗</span>
+      </a>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<script>
+
+function openCatalogue(){
+
+  const overlay =
+    document.getElementById("catalogueOverlay");
+
+  overlay.classList.add("open");
+
+  document.body.classList.add("modal-open");
+
+}
+
+
+function closeCatalogue(){
+
+  const overlay =
+    document.getElementById("catalogueOverlay");
+
+  overlay.classList.remove("open");
+
+  document.body.classList.remove("modal-open");
+
+}
+
+
+function closeCatalogueFromBackground(event){
+
+  if(
+    event.target ===
+    document.getElementById("catalogueOverlay")
+  ){
+
+    closeCatalogue();
+
+  }
+
+}
+
+
+document.addEventListener("keydown",function(event){
+
+  if(event.key === "Escape"){
+
+    closeCatalogue();
+
+  }
+
+});
+
+</script>
+
 
 </body>
 </html>
