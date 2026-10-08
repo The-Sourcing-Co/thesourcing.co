@@ -16,12 +16,13 @@
 
 <meta
   name="description"
-  content="The Sourcing Co. handles sourcing and procurement for businesses — finding the right suppliers, working through the details and getting requirements sorted."
+  content="The Sourcing Co. handles sourcing and procurement for businesses. Tell us what you need and we'll take it from there."
 >
 
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
 
 :root{
   --ink:#171715;
@@ -33,33 +34,44 @@
   --gold-light:#c6a16b;
 }
 
+
 *{
   box-sizing:border-box;
 }
+
 
 html{
   scroll-behavior:smooth;
 }
 
+
 body{
   margin:0;
-  color:var(--ink);
   background:var(--cream);
+  color:var(--ink);
   font-family:"DM Sans",Arial,sans-serif;
-  line-height:1.55;
+  line-height:1.5;
 }
+
 
 body.modal-open{
   overflow:hidden;
 }
 
+
 a{
   color:inherit;
 }
 
+
 button{
   font-family:inherit;
 }
+
+
+/* =================================
+   LAYOUT
+================================= */
 
 .wrap{
   width:min(1180px,calc(100% - 48px));
@@ -67,9 +79,9 @@ button{
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* =================================
+   NAV
+================================= */
 
 .nav{
   height:88px;
@@ -79,44 +91,50 @@ button{
   border-bottom:1px solid var(--line);
 }
 
+
 .logo{
   font-size:15px;
   font-weight:700;
   letter-spacing:.04em;
 }
 
+
 .logo span{
   color:var(--gold);
 }
 
+
 .navlinks{
   display:flex;
-  gap:30px;
+  gap:28px;
 }
+
 
 .navlinks a{
   text-decoration:none;
-  font-size:13px;
-  color:#44413c;
+  font-size:12px;
+  color:#4d4942;
 }
+
 
 .navlinks a:hover{
   color:var(--gold);
 }
 
 
-/* =========================
+/* =================================
    HERO
-========================= */
+================================= */
 
 .hero{
   min-height:calc(100vh - 88px);
   display:grid;
-  grid-template-columns:1.15fr .85fr;
+  grid-template-columns:1.08fr .92fr;
   align-items:center;
   gap:70px;
-  padding:85px 0 100px;
+  padding:75px 0 95px;
 }
+
 
 .kicker{
   display:flex;
@@ -124,10 +142,11 @@ button{
   gap:12px;
   text-transform:uppercase;
   letter-spacing:.19em;
-  font-size:11px;
+  font-size:10px;
   font-weight:700;
   color:var(--gold);
 }
+
 
 .kicker:before{
   content:"";
@@ -136,58 +155,65 @@ button{
   background:var(--gold);
 }
 
+
 h1{
   font-family:"Playfair Display",Georgia,serif;
-  font-size:clamp(58px,8vw,105px);
+  font-size:clamp(58px,8vw,102px);
   line-height:.91;
-  font-weight:500;
   letter-spacing:-.055em;
-  margin:24px 0 30px;
+  font-weight:500;
+  margin:24px 0 28px;
 }
 
+
 .hero-copy{
-  max-width:620px;
-  font-size:18px;
+  max-width:570px;
   color:var(--muted);
+  font-size:17px;
 }
+
 
 .ctas{
   display:flex;
   align-items:center;
-  gap:22px;
-  margin-top:35px;
+  gap:24px;
+  margin-top:34px;
 }
+
 
 .button{
   display:inline-flex;
   align-items:center;
+  justify-content:center;
   gap:12px;
   padding:14px 22px;
   background:var(--ink);
   color:white;
   text-decoration:none;
-  font-size:13px;
+  font-size:12px;
   font-weight:600;
-  transition:.25s;
-  border:0;
+  border:1px solid var(--ink);
   cursor:pointer;
+  transition:.25s;
 }
+
 
 .button:hover{
+  background:#2c2a27;
   transform:translateY(-2px);
-  background:#2a2926;
 }
 
+
 .textlink{
-  font-size:13px;
-  text-decoration:none;
   border:0;
   border-bottom:1px solid var(--ink);
-  padding:0 0 3px;
   background:none;
   color:var(--ink);
+  padding:0 0 3px;
+  font-size:12px;
   cursor:pointer;
 }
+
 
 .textlink:hover{
   color:var(--gold);
@@ -195,671 +221,617 @@ h1{
 }
 
 
-/* =========================
+/* =================================
    HERO ART
-========================= */
+================================= */
 
 .hero-art{
   position:relative;
-  min-height:480px;
+  height:470px;
 }
+
 
 .art-main{
   position:absolute;
   right:0;
-  top:25px;
+  top:15px;
   width:78%;
-  height:410px;
+  height:400px;
   background:var(--ink);
   overflow:hidden;
 }
 
+
 .art-main:before{
   content:"";
   position:absolute;
-  inset:35px;
-  border:1px solid #6d665b;
+  inset:34px;
+  border:1px solid #6e675d;
 }
 
-.art-word{
-  position:absolute;
-  left:35px;
-  bottom:25px;
-  color:#f1eadf;
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:68px;
-  line-height:.8;
-}
 
 .art-label{
   position:absolute;
   right:20px;
   top:20px;
-  color:#c6a16b;
   writing-mode:vertical-rl;
+  color:var(--gold-light);
   text-transform:uppercase;
   letter-spacing:.2em;
   font-size:9px;
 }
 
+
+.art-word{
+  position:absolute;
+  left:35px;
+  bottom:28px;
+  color:#f4ede3;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:68px;
+  line-height:.78;
+  letter-spacing:-.04em;
+}
+
+
 .art-small{
   position:absolute;
   left:0;
   bottom:0;
-  width:46%;
-  height:190px;
-  background:#ded4c4;
-  padding:25px;
+  width:47%;
+  height:185px;
+  background:#ddd3c2;
+  padding:24px;
 }
+
 
 .art-small strong{
   display:block;
   font-family:"Playfair Display",Georgia,serif;
-  font-size:29px;
+  font-size:27px;
+  line-height:1.05;
   font-weight:500;
 }
+
 
 .art-small span{
+  display:block;
+  margin-top:8px;
   font-size:11px;
-  color:#5d574e;
+  color:#5f594f;
 }
 
 
-/* =========================
-   MARQUEE
-========================= */
+/* =================================
+   MIDDLE SECTION
+================================= */
 
-.marquee{
+.middle{
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
-  overflow:hidden;
-}
-
-.marquee-inner{
-  display:flex;
-  width:max-content;
-  animation:scroll 24s linear infinite;
-}
-
-.marquee span{
-  padding:20px 30px;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.18em;
-  color:#625d55;
-}
-
-.marquee b{
-  color:var(--gold);
-  font-weight:500;
-}
-
-@keyframes scroll{
-  to{
-    transform:translateX(-50%);
-  }
+  padding:90px 0;
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section{
-  padding:110px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.section-head{
+.middle-inner{
   display:grid;
-  grid-template-columns:.7fr 1.3fr;
-  gap:60px;
-  margin-bottom:55px;
+  grid-template-columns:.75fr 1.25fr;
+  gap:70px;
+  align-items:start;
 }
 
-.section-number{
-  font-size:11px;
+
+.middle-number{
+  font-size:10px;
   letter-spacing:.18em;
   color:var(--gold);
 }
 
-h2{
+
+.middle h2{
   font-family:"Playfair Display",Georgia,serif;
-  font-size:clamp(42px,5vw,66px);
-  line-height:1;
+  font-size:clamp(43px,5vw,67px);
+  line-height:.97;
+  letter-spacing:-.045em;
   font-weight:500;
-  letter-spacing:-.04em;
-  margin:0;
-}
-
-.intro{
-  max-width:650px;
-  color:var(--muted);
-  font-size:17px;
+  margin:0 0 48px;
 }
 
 
-/* =========================
-   WHAT WE DO
-========================= */
-
-.services{
+.points{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   border-top:1px solid var(--line);
+}
+
+
+.point{
+  padding:24px 24px 10px 0;
+}
+
+
+.point + .point{
+  padding-left:24px;
   border-left:1px solid var(--line);
 }
 
-.service{
-  min-height:280px;
-  padding:30px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.25);
-  transition:.3s;
-}
 
-.service:hover{
-  background:var(--paper);
-  transform:translateY(-5px);
-}
-
-.service-num{
+.point-number{
   color:var(--gold);
-  font-size:11px;
-  letter-spacing:.12em;
-}
-
-.service h3{
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:27px;
-  font-weight:500;
-  margin:60px 0 12px;
-}
-
-.service p{
-  font-size:13px;
-  color:var(--muted);
-  margin:0;
-}
-
-
-/* =========================
-   STATEMENT
-========================= */
-
-.statement{
-  background:var(--ink);
-  color:#f6f0e7;
-  border:0;
-}
-
-.statement .kicker{
-  color:#c6a16b;
-}
-
-.statement .kicker:before{
-  background:#c6a16b;
-}
-
-.statement h2{
-  max-width:900px;
-}
-
-.statement p{
-  max-width:680px;
-  color:#aaa49a;
-  margin-top:30px;
-  font-size:16px;
-}
-
-
-/* =========================
-   STARTUP / GROWING BUSINESS
-========================= */
-
-.growth{
-  background:#ded4c4;
-}
-
-.growth h2{
-  max-width:850px;
-}
-
-.growth-copy{
-  max-width:720px;
-  margin-top:30px;
-  color:#514c45;
-  font-size:17px;
-}
-
-.growth-highlight{
-  margin-top:40px;
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:28px;
-  line-height:1.15;
-  max-width:700px;
-}
-
-
-/* =========================
-   PROCESS
-========================= */
-
-.process{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  border-top:1px solid var(--line);
-  border-left:1px solid var(--line);
-}
-
-.process-step{
-  padding:28px;
-  min-height:210px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.process-step .num{
-  font-size:11px;
-  color:var(--gold);
+  font-size:10px;
   letter-spacing:.15em;
 }
 
-.process-step h3{
-  font-size:15px;
-  margin:42px 0 9px;
+
+.point h3{
+  font-size:13px;
+  margin:24px 0 7px;
+  font-weight:700;
 }
 
-.process-step p{
-  font-size:13px;
+
+.point p{
   color:var(--muted);
+  font-size:12px;
   margin:0;
 }
 
 
-/* =========================
-   CTA
-========================= */
+/* =================================
+   FINAL CTA
+================================= */
 
-.cta{
+.final{
+  padding:120px 0 125px;
   text-align:center;
-  padding:130px 0;
 }
 
-.cta h2{
-  max-width:820px;
-  margin:auto;
+
+.final .kicker{
+  justify-content:center;
 }
 
-.cta p{
+
+.final h2{
+  max-width:760px;
+  margin:25px auto 18px;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(48px,6vw,78px);
+  line-height:.95;
+  letter-spacing:-.05em;
+  font-weight:500;
+}
+
+
+.final p{
+  max-width:540px;
+  margin:0 auto 30px;
   color:var(--muted);
-  max-width:600px;
-  margin:25px auto;
-}
-
-.cta .button{
-  margin-top:15px;
+  font-size:15px;
 }
 
 
-/* =========================
+.final-email{
+  margin-top:20px;
+  font-size:11px;
+  color:var(--muted);
+}
+
+
+.final-email a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+}
+
+
+/* =================================
    FOOTER
-========================= */
+================================= */
 
 footer{
-  padding:28px 0 45px;
+  border-top:1px solid var(--line);
+  padding:25px 0 35px;
   display:flex;
   justify-content:space-between;
-  color:#777167;
-  font-size:11px;
+  color:#777168;
+  font-size:10px;
 }
 
-footer .footer-logo{
+
+.footer-logo{
   font-weight:700;
   color:var(--ink);
 }
 
 
-/* =========================
+/* =================================
    POPUP
-========================= */
+================================= */
 
-.catalogue-overlay{
+.overlay{
   position:fixed;
   inset:0;
   z-index:1000;
   background:rgba(23,23,21,.72);
   backdrop-filter:blur(7px);
   -webkit-backdrop-filter:blur(7px);
+
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:25px;
+
+  padding:22px;
+
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-  transition:opacity .25s ease,visibility .25s ease;
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease;
 }
 
-.catalogue-overlay.open{
+
+.overlay.open{
   opacity:1;
   visibility:visible;
   pointer-events:auto;
 }
 
-.catalogue{
-  width:min(920px,100%);
-  max-height:min(86vh,820px);
+
+.popup{
+  width:min(850px,100%);
+  max-height:88vh;
+
   background:var(--paper);
-  box-shadow:0 30px 90px rgba(0,0,0,.3);
+
   display:flex;
   flex-direction:column;
-  transform:translateY(20px) scale(.98);
-  transition:transform .3s ease;
+
+  box-shadow:0 30px 90px rgba(0,0,0,.32);
+
+  transform:translateY(18px) scale(.985);
+
+  transition:transform .28s ease;
 }
 
-.catalogue-overlay.open .catalogue{
+
+.overlay.open .popup{
   transform:translateY(0) scale(1);
 }
 
-.catalogue-header{
+
+/* =================================
+   POPUP HEADER
+================================= */
+
+.popup-header{
   flex-shrink:0;
+
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
+
   gap:25px;
-  padding:32px 35px 25px;
+
+  padding:30px 34px 24px;
+
   border-bottom:1px solid var(--line);
 }
 
-.catalogue-kicker{
-  color:var(--gold);
+
+.popup-kicker{
   text-transform:uppercase;
   letter-spacing:.18em;
-  font-size:10px;
+  font-size:9px;
   font-weight:700;
+  color:var(--gold);
   margin-bottom:8px;
 }
 
-.catalogue-title{
+
+.popup h2{
   font-family:"Playfair Display",Georgia,serif;
-  font-size:38px;
-  line-height:1;
+  font-size:39px;
+  line-height:.98;
   font-weight:500;
+  letter-spacing:-.04em;
   margin:0;
 }
 
-.catalogue-description{
+
+.popup-intro{
+  max-width:570px;
   color:var(--muted);
   font-size:12px;
-  max-width:560px;
-  margin:10px 0 0;
+  margin:12px 0 0;
 }
 
-.close-catalogue{
+
+.close{
   flex-shrink:0;
+
   width:38px;
   height:38px;
-  border:1px solid var(--line);
+
   background:transparent;
+  border:1px solid var(--line);
+
   cursor:pointer;
+
   font-size:20px;
   line-height:1;
-  color:var(--ink);
 }
 
-.close-catalogue:hover{
+
+.close:hover{
   background:var(--ink);
   color:white;
 }
 
-.catalogue-body{
+
+/* =================================
+   POPUP BODY
+================================= */
+
+.popup-body{
   overflow-y:auto;
-  padding:25px 35px 35px;
+  padding:27px 34px 34px;
+
   scrollbar-width:thin;
   scrollbar-color:var(--gold) transparent;
 }
 
-.catalogue-note{
-  padding:13px 16px;
-  background:#eee7da;
-  border-left:2px solid var(--gold);
-  color:#625d55;
-  font-size:11px;
-  margin-bottom:28px;
-}
 
-.catalogue-category{
-  margin-bottom:35px;
-}
-
-.category-heading{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  gap:20px;
-  padding-bottom:12px;
-  border-bottom:1px solid var(--line);
-  margin-bottom:15px;
-}
-
-.category-heading h3{
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:24px;
-  font-weight:500;
-  margin:0;
-}
-
-.category-heading span{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-size:9px;
-}
-
-.catalogue-items{
+.audience{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
-.catalogue-item{
+
+.audience-card{
+  padding:20px;
   background:white;
-  border:1px solid #e5ded2;
-  padding:18px;
+  border:1px solid #e3ddd2;
   transition:.2s;
 }
 
-.catalogue-item:hover{
-  border-color:#bca681;
+
+.audience-card:hover{
+  border-color:#bda77e;
   transform:translateY(-2px);
 }
 
-.catalogue-item-name{
-  font-size:13px;
-  font-weight:600;
-  margin-bottom:3px;
+
+.audience-label{
+  color:var(--gold);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
 }
 
-.catalogue-item-detail{
-  color:var(--muted);
-  font-size:11px;
+
+.audience-card h3{
+  margin:10px 0 6px;
+  font-size:14px;
 }
 
-.catalogue-footer{
-  flex-shrink:0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  padding:20px 35px;
-  border-top:1px solid var(--line);
-  background:#f1ebe1;
-}
 
-.catalogue-footer p{
+.audience-card p{
   color:var(--muted);
   font-size:11px;
   margin:0;
 }
 
-.catalogue-footer a{
-  white-space:nowrap;
+
+.popup-bottom{
+  margin-top:28px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
 }
 
 
-/* =========================
-   TABLET
-========================= */
+.popup-bottom h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:27px;
+  font-weight:500;
+  margin:0 0 5px;
+}
+
+
+.popup-bottom p{
+  color:var(--muted);
+  font-size:12px;
+  margin:0 0 17px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
 
 @media(max-width:850px){
 
   .hero{
     grid-template-columns:1fr;
-    gap:40px;
-    padding-top:65px;
+    gap:45px;
   }
+
 
   .hero-art{
-    min-height:380px;
+    height:380px;
   }
+
 
   .art-main{
-    height:320px;
+    height:325px;
   }
 
-  .section-head{
+
+  .middle-inner{
     grid-template-columns:1fr;
-    gap:25px;
-  }
-
-  .services{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .process{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .catalogue-items{
-    grid-template-columns:1fr 1fr;
+    gap:35px;
   }
 
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:560px){
 
   .wrap{
-    width:min(100% - 32px,1180px);
+    width:calc(100% - 32px);
   }
+
 
   .nav{
     height:74px;
   }
 
+
   .navlinks{
-    gap:13px;
+    gap:15px;
   }
+
 
   .navlinks a:first-child{
     display:none;
   }
 
+
+  .hero{
+    min-height:auto;
+    padding:60px 0 75px;
+  }
+
+
   h1{
     font-size:57px;
   }
 
-  .hero{
-    min-height:auto;
-    padding:65px 0 75px;
+
+  .hero-copy{
+    font-size:15px;
   }
 
-  .hero-art{
-    min-height:320px;
+
+  .ctas{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:19px;
   }
+
+
+  .hero-art{
+    height:310px;
+  }
+
 
   .art-main{
     width:82%;
-    height:275px;
+    height:270px;
   }
 
-  .art-small{
-    height:140px;
-    width:50%;
-    padding:18px;
+
+  .art-main:before{
+    inset:25px;
   }
+
 
   .art-word{
-    font-size:48px;
     left:25px;
+    bottom:25px;
+    font-size:49px;
   }
 
-  .services,
-  .process{
+
+  .art-small{
+    width:50%;
+    height:130px;
+    padding:17px;
+  }
+
+
+  .art-small strong{
+    font-size:22px;
+  }
+
+
+  .middle{
+    padding:75px 0;
+  }
+
+
+  .middle h2{
+    margin-bottom:40px;
+  }
+
+
+  .points{
     grid-template-columns:1fr;
   }
 
-  section{
-    padding:80px 0;
+
+  .point{
+    padding:22px 0;
   }
 
-  .service{
-    min-height:220px;
+
+  .point + .point{
+    padding-left:0;
+    border-left:0;
+    border-top:1px solid var(--line);
   }
 
-  .service h3{
-    margin-top:45px;
+
+  .final{
+    padding:90px 0 95px;
   }
 
-  .growth-highlight{
-    font-size:24px;
+
+  .final h2{
+    font-size:50px;
   }
+
 
   footer{
     display:block;
   }
 
-  footer div+div{
-    margin-top:10px;
+
+  footer div + div{
+    margin-top:9px;
   }
 
-  .catalogue-overlay{
+
+  .overlay{
     padding:10px;
   }
 
-  .catalogue{
+
+  .popup{
     max-height:94vh;
   }
 
-  .catalogue-header{
+
+  .popup-header{
     padding:24px 20px 20px;
   }
 
-  .catalogue-title{
-    font-size:31px;
+
+  .popup h2{
+    font-size:32px;
   }
 
-  .catalogue-body{
+
+  .popup-body{
     padding:20px;
   }
 
-  .catalogue-items{
+
+  .audience{
     grid-template-columns:1fr;
-  }
-
-  .catalogue-footer{
-    padding:17px 20px;
-    display:block;
-  }
-
-  .catalogue-footer .button{
-    margin-top:12px;
   }
 
 }
@@ -872,12 +844,29 @@ footer .footer-logo{
 <body>
 
 
+<!-- =================================
+     SCROLL RESTORATION FIX
+================================= -->
+
+<script>
+
+if("scrollRestoration" in history){
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load",function(){
+  window.scrollTo(0,0);
+});
+
+</script>
+
+
 <div class="wrap">
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- =================================
+     NAV
+================================= -->
 
 <header class="nav">
 
@@ -885,13 +874,10 @@ footer .footer-logo{
     THE SOURCING <span>CO.</span>
   </div>
 
+
   <nav class="navlinks">
 
-    <a href="#services">
-      What we do
-    </a>
-
-    <a href="#process">
+    <a href="#how">
       How it works
     </a>
 
@@ -907,11 +893,12 @@ footer .footer-logo{
 <main>
 
 
-<!-- =========================
+<!-- =================================
      HERO
-========================= -->
+================================= -->
 
 <section class="hero">
+
 
   <div>
 
@@ -921,23 +908,22 @@ footer .footer-logo{
 
 
     <h1>
-      You know what<br>
-      you need.<br>
-      We know how<br>
+      You know what
+      you need.
+      We know how
       to get it.
     </h1>
 
 
     <p class="hero-copy">
-      Tell us what you're trying to get done.
-      We'll handle the sourcing, procurement and
-      coordination — so you don't have to spend
-      your time chasing suppliers and piecing
-      everything together.
+      Tell us what you're looking for.
+      We'll handle the sourcing, work through
+      the details and take it from there.
     </p>
 
 
     <div class="ctas">
+
 
       <a
         class="button"
@@ -953,10 +939,11 @@ footer .footer-logo{
       <button
         class="textlink"
         type="button"
-        onclick="openCatalogue()"
+        onclick="openPopup()"
       >
-        Explore what we do
+        Explore whom we source for
       </button>
+
 
     </div>
 
@@ -968,11 +955,13 @@ footer .footer-logo{
     aria-hidden="true"
   >
 
+
     <div class="art-main">
 
       <div class="art-label">
         Source · Procure · Deliver
       </div>
+
 
       <div class="art-word">
         GET IT<br>
@@ -988,457 +977,139 @@ footer .footer-logo{
         One requirement.
       </strong>
 
+
       <span>
         We take it from there.
       </span>
 
     </div>
 
+
   </div>
+
 
 </section>
 
 
-<!-- =========================
-     MARQUEE
-========================= -->
-
-<div class="marquee">
-
-  <div class="marquee-inner">
-
-    <span>
-      Products <b>✦</b>
-    </span>
-
-    <span>
-      Manufacturing <b>✦</b>
-    </span>
-
-    <span>
-      Corporate Requirements <b>✦</b>
-    </span>
-
-    <span>
-      Packaging <b>✦</b>
-    </span>
-
-    <span>
-      Merchandise <b>✦</b>
-    </span>
-
-    <span>
-      Business Supplies <b>✦</b>
-    </span>
-
-    <span>
-      Custom Requirements <b>✦</b>
-    </span>
-
-    <span>
-      Products <b>✦</b>
-    </span>
-
-    <span>
-      Manufacturing <b>✦</b>
-    </span>
-
-    <span>
-      Corporate Requirements <b>✦</b>
-    </span>
-
-    <span>
-      Packaging <b>✦</b>
-    </span>
-
-    <span>
-      Merchandise <b>✦</b>
-    </span>
-
-    <span>
-      Business Supplies <b>✦</b>
-    </span>
-
-    <span>
-      Custom Requirements <b>✦</b>
-    </span>
-
-  </div>
-
-</div>
-
-
-<!-- =========================
-     WHAT WE DO
-========================= -->
-
-<section id="services">
-
-  <div class="section-head">
-
-    <div class="section-number">
-      01 / WHAT WE DO
-    </div>
-
-
-    <div>
-
-      <h2>
-        Got a requirement?<br>
-        Give us the headache.
-      </h2>
-
-
-      <p class="intro">
-        You shouldn't have to spend your afternoon
-        hunting through supplier directories, chasing
-        quotations or wondering whether you've found
-        the right vendor.
-      </p>
-
-
-      <p class="intro">
-        Tell us what you need. We'll work out how
-        to get it and take the requirement forward.
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <div class="services">
-
-
-    <article class="service">
-
-      <div class="service-num">
-        01
-      </div>
-
-
-      <h3>
-        Products & Manufacturing
-      </h3>
-
-
-      <p>
-        Products, custom manufacturing, private-label
-        requirements, apparel, accessories and more.
-      </p>
-
-    </article>
-
-
-    <article class="service">
-
-      <div class="service-num">
-        02
-      </div>
-
-
-      <h3>
-        Corporate & Brand
-      </h3>
-
-
-      <p>
-        Corporate gifting, employee kits, branded
-        merchandise, promotional products and uniforms.
-      </p>
-
-    </article>
-
-
-    <article class="service">
-
-      <div class="service-num">
-        03
-      </div>
-
-
-      <h3>
-        Packaging & Print
-      </h3>
-
-
-      <p>
-        Boxes, bags, labels, printed materials,
-        inserts and presentation requirements.
-      </p>
-
-    </article>
-
-
-    <article class="service">
-
-      <div class="service-num">
-        04
-      </div>
-
-
-      <h3>
-        Custom Requirements
-      </h3>
-
-
-      <p>
-        Something specific? Tell us what you're
-        looking for. We'll figure out where to start.
-      </p>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     VALUE PROPOSITION
-========================= -->
-
-<section class="statement">
-
-  <div class="kicker">
-    The point is not the vendor
-  </div>
-
-
-  <h2>
-    You don't need a vendor list.<br>
-    You need the thing.
-  </h2>
-
-
-  <p>
-    We don't simply introduce you to suppliers
-    and leave you to figure out the rest. We
-    handle the procurement process — finding
-    suitable sources, working through the
-    commercial details, coordinating production
-    or customisation, and moving the order
-    through to delivery.
-  </p>
-
-
-  <p>
-    You bring the requirement.
-    We bring the network.
-  </p>
-
-</section>
-
-
-<!-- =========================
-     GROWING BUSINESSES
-========================= -->
-
-<section class="growth">
-
-  <div class="kicker">
-    Building something new?
-  </div>
-
-
-  <h2>
-    You shouldn't have to build
-    a supplier network from scratch.
-  </h2>
-
-
-  <p class="growth-copy">
-    When you're setting up an operation, launching
-    something new or sourcing something you've never
-    bought before, the hardest part can simply be
-    knowing who to call.
-  </p>
-
-
-  <p class="growth-copy">
-    You don't need the contacts. You don't need
-    years of supplier relationships. Bring us the
-    requirement and we'll work out the sourcing.
-  </p>
-
-
-  <div class="growth-highlight">
-    You focus on building the business.
-    We'll handle getting the things you need.
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PROCESS
-========================= -->
-
-<section id="process">
-
-  <div class="section-head">
-
-    <div class="section-number">
-      02 / HOW IT WORKS
-    </div>
-
-
-    <div>
-
-      <h2>
-        You tell us.<br>
-        We take it from there.
-      </h2>
-
-
-      <p class="intro">
-        One requirement, one point of contact and
-        no need to spend your time coordinating
-        every moving part yourself.
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <div class="process">
-
-
-    <div class="process-step">
-
-      <div class="num">
-        01
-      </div>
-
-
-      <h3>
-        Tell us
-      </h3>
-
-
-      <p>
-        Share what you need, how much,
-        your budget and your deadline.
-      </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-      <div class="num">
-        02
-      </div>
-
-
-      <h3>
-        We find it
-      </h3>
-
-
-      <p>
-        We identify suitable suppliers,
-        manufacturers and sourcing options.
-      </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-      <div class="num">
-        03
-      </div>
-
-
-      <h3>
-        We work it out
-      </h3>
-
-
-      <p>
-        Pricing, quantities, specifications,
-        customisation and timelines.
-      </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-      <div class="num">
-        04
-      </div>
-
-
-      <h3>
-        We coordinate
-      </h3>
-
-
-      <p>
-        We keep the suppliers and moving
-        parts on track.
-      </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-      <div class="num">
-        05
-      </div>
-
-
-      <h3>
-        You get it
-      </h3>
-
-
-      <p>
-        The requirement gets where it
-        needs to go, as agreed.
-      </p>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
+<!-- =================================
+     MIDDLE
+================================= -->
 
 <section
-  class="cta"
+  class="middle"
+  id="how"
+>
+
+
+  <div class="middle-inner">
+
+
+    <div>
+
+      <div class="middle-number">
+        01 / THE SIMPLE VERSION
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h2>
+        You bring the requirement.
+        We handle the sourcing.
+      </h2>
+
+
+      <div class="points">
+
+
+        <div class="point">
+
+          <div class="point-number">
+            01
+          </div>
+
+          <h3>
+            SOURCE
+          </h3>
+
+          <p>
+            Find the right people.
+          </p>
+
+        </div>
+
+
+        <div class="point">
+
+          <div class="point-number">
+            02
+          </div>
+
+          <h3>
+            PROCURE
+          </h3>
+
+          <p>
+            Work through the details.
+          </p>
+
+        </div>
+
+
+        <div class="point">
+
+          <div class="point-number">
+            03
+          </div>
+
+          <h3>
+            DELIVER
+          </h3>
+
+          <p>
+            Get it where it needs to go.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =================================
+     FINAL CTA
+================================= -->
+
+<section
+  class="final"
   id="contact"
 >
 
-  <div
-    class="kicker"
-    style="justify-content:center"
-  >
-    Have a requirement?
+
+  <div class="kicker">
+    Have something in mind?
   </div>
 
 
   <h2>
     Tell us what you need.
-    We'll figure out how to get it.
   </h2>
 
 
   <p>
-    You don't need to know who makes it,
-    where to find it or who to call.
-    Give us the requirement and we'll
-    take it from there.
+    You don't need to know who to call,
+    where to find it or how to put it all
+    together. Just give us the requirement.
   </p>
 
 
@@ -1448,19 +1119,20 @@ footer .footer-logo{
     target="_blank"
     rel="noopener"
   >
-    Start a requirement
+    Share your requirement
     <span>↗</span>
   </a>
 
 
-  <p
-    style="font-size:12px;margin-top:25px"
-  >
+  <div class="final-email">
+
     Prefer email?
     <a href="mailto:thesourcing.co26@gmail.com">
       thesourcing.co26@gmail.com
     </a>
-  </p>
+
+  </div>
+
 
 </section>
 
@@ -1468,9 +1140,9 @@ footer .footer-logo{
 </main>
 
 
-<!-- =========================
+<!-- =================================
      FOOTER
-========================= -->
+================================= -->
 
 <footer>
 
@@ -1480,7 +1152,7 @@ footer .footer-logo{
 
 
   <div>
-    © 2026 The Sourcing Co. · B2B Sourcing & Procurement
+    © 2026 The Sourcing Co.
   </div>
 
 </footer>
@@ -1489,525 +1161,213 @@ footer .footer-logo{
 </div>
 
 
-<!-- ==================================================
-     EXPLORE WHAT WE DO POPUP
-================================================== -->
+<!-- =================================
+     WHO WE SOURCE FOR POPUP
+================================= -->
 
 <div
-  class="catalogue-overlay"
-  id="catalogueOverlay"
-  onclick="closeCatalogueFromBackground(event)"
+  class="overlay"
+  id="popupOverlay"
+  onclick="closeFromBackground(event)"
 >
 
 
   <div
-    class="catalogue"
+    class="popup"
     role="dialog"
     aria-modal="true"
-    aria-labelledby="catalogueTitle"
+    aria-labelledby="popupTitle"
   >
 
 
-    <div class="catalogue-header">
+    <div class="popup-header">
+
 
       <div>
 
-        <div class="catalogue-kicker">
-          What we do
+        <div class="popup-kicker">
+          Who we source for
         </div>
 
 
-        <h2
-          class="catalogue-title"
-          id="catalogueTitle"
-        >
-          What are you<br>
-          trying to get done?
+        <h2 id="popupTitle">
+          Is this for<br>
+          someone like you?
         </h2>
 
 
-        <p class="catalogue-description">
-          These are a few examples of the kinds of
-          requirements we can handle. They're not
-          limits. If you need something else,
-          tell us what it is.
+        <p class="popup-intro">
+          We work with businesses at different stages —
+          from people building something new to teams
+          that simply need someone to handle a requirement.
         </p>
 
       </div>
 
 
       <button
-        class="close-catalogue"
+        class="close"
         type="button"
-        onclick="closeCatalogue()"
+        onclick="closePopup()"
         aria-label="Close"
       >
         ×
       </button>
 
-    </div>
-
-
-    <div class="catalogue-body">
-
-
-      <div class="catalogue-note">
-        EXAMPLES, NOT LIMITS · Every requirement is
-        different. Specifications, quantities,
-        pricing and timelines depend on the project.
-      </div>
-
-
-      <!-- MAKE IT -->
-
-      <div class="catalogue-category">
-
-        <div class="category-heading">
-
-          <h3>
-            Make It
-          </h3>
-
-          <span>
-            Products · Manufacturing · Custom
-          </span>
-
-        </div>
-
-
-        <div class="catalogue-items">
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Apparel & Clothing
-            </div>
-
-            <div class="catalogue-item-detail">
-              T-shirts · uniforms · activewear · custom garments
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Swimwear & Intimates
-            </div>
-
-            <div class="catalogue-item-detail">
-              Custom designs · private label · production
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Custom Products
-            </div>
-
-            <div class="catalogue-item-detail">
-              Product development · custom manufacturing · sourcing
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Accessories
-            </div>
-
-            <div class="catalogue-item-detail">
-              Bags · accessories · lifestyle products · custom items
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <!-- BRAND IT -->
-
-      <div class="catalogue-category">
-
-        <div class="category-heading">
-
-          <h3>
-            Brand It
-          </h3>
-
-          <span>
-            Merchandise · Packaging · Print
-          </span>
-
-        </div>
-
-
-        <div class="catalogue-items">
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Corporate Gifting
-            </div>
-
-            <div class="catalogue-item-detail">
-              Employee gifts · client gifts · hampers · welcome kits
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Branded Merchandise
-            </div>
-
-            <div class="catalogue-item-detail">
-              Bottles · notebooks · bags · promotional products
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Custom Packaging
-            </div>
-
-            <div class="catalogue-item-detail">
-              Boxes · bags · presentation packaging · inserts
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Labels & Printing
-            </div>
-
-            <div class="catalogue-item-detail">
-              Labels · stickers · brochures · cards · printed materials
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <!-- SET IT UP -->
-
-      <div class="catalogue-category">
-
-        <div class="category-heading">
-
-          <h3>
-            Set It Up
-          </h3>
-
-          <span>
-            Business · Office · Operations
-          </span>
-
-        </div>
-
-
-        <div class="catalogue-items">
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Office Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Stationery · desk supplies · workplace essentials
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Employee Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Joining kits · uniforms · employee supplies
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Retail Materials
-            </div>
-
-            <div class="catalogue-item-detail">
-              Display materials · bags · signage · store requirements
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Business Supplies
-            </div>
-
-            <div class="catalogue-item-detail">
-              Everyday and specialised operational requirements
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <!-- SEND IT OUT -->
-
-      <div class="catalogue-category">
-
-        <div class="category-heading">
-
-          <h3>
-            Send It Out
-          </h3>
-
-          <span>
-            Packaging · Fulfilment · Presentation
-          </span>
-
-        </div>
-
-
-        <div class="catalogue-items">
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Shipping Materials
-            </div>
-
-            <div class="catalogue-item-detail">
-              Mailers · cartons · protective packaging · supplies
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Retail Packaging
-            </div>
-
-            <div class="catalogue-item-detail">
-              Product boxes · bags · labels · presentation
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Fulfilment Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Packing · kitting · assembly · related coordination
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Custom Delivery Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Specific requirements sourced to your project
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <!-- MAKE IT HAPPEN -->
-
-      <div class="catalogue-category">
-
-        <div class="category-heading">
-
-          <h3>
-            Make It Happen
-          </h3>
-
-          <span>
-            Events · Launches · Experiences
-          </span>
-
-        </div>
-
-
-        <div class="catalogue-items">
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Event Merchandise
-            </div>
-
-            <div class="catalogue-item-detail">
-              Giveaways · branded products · attendee kits
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Conference Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Folders · badges · stationery · event materials
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Launch Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Promotional materials · packaging · merchandise
-            </div>
-
-          </div>
-
-
-          <div class="catalogue-item">
-
-            <div class="catalogue-item-name">
-              Custom Event Requirements
-            </div>
-
-            <div class="catalogue-item-detail">
-              Tell us what the event needs. We'll work it out.
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <!-- CUSTOM -->
-
-      <div class="catalogue-category">
-
-        <div class="category-heading">
-
-          <h3>
-            Something Else?
-          </h3>
-
-          <span>
-            That's fine too.
-          </span>
-
-        </div>
-
-
-        <div class="catalogue-item">
-
-          <div>
-
-            <div class="catalogue-item-name">
-              Give Us the Requirement
-            </div>
-
-            <div class="catalogue-item-detail">
-              If you don't see it here, don't worry.
-              You don't need to know where to find it.
-              That's what we're here for.
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
 
     </div>
 
 
-    <!-- POPUP FOOTER -->
-
-    <div class="catalogue-footer">
-
-      <p>
-        You don't need to know who to call.
-        Just tell us what you need.
-      </p>
+    <div class="popup-body">
 
 
-      <a
-        class="button"
-        href="https://tally.so/r/rjxZ45"
-        target="_blank"
-        rel="noopener"
-      >
-        Start a requirement
-        <span>↗</span>
-      </a>
+      <div class="audience">
+
+
+        <div class="audience-card">
+
+          <div class="audience-label">
+            01
+          </div>
+
+          <h3>
+            Growing businesses
+          </h3>
+
+          <p>
+            You don't have a supplier network yet,
+            or you need something you've never sourced before.
+          </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+          <div class="audience-label">
+            02
+          </div>
+
+          <h3>
+            Established businesses
+          </h3>
+
+          <p>
+            You need something outside your usual
+            vendors or simply don't have time to chase it.
+          </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+          <div class="audience-label">
+            03
+          </div>
+
+          <h3>
+            HR & Admin
+          </h3>
+
+          <p>
+            Employee kits, gifting, uniforms,
+            workplace requirements and more.
+          </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+          <div class="audience-label">
+            04
+          </div>
+
+          <h3>
+            Marketing & Events
+          </h3>
+
+          <p>
+            Merchandise, packaging, event materials,
+            launches and promotional requirements.
+          </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+          <div class="audience-label">
+            05
+          </div>
+
+          <h3>
+            Founders & E-commerce brands
+          </h3>
+
+          <p>
+            Products, packaging, private label,
+            custom orders and sourcing requirements.
+          </p>
+
+        </div>
+
+
+        <div class="audience-card">
+
+          <div class="audience-label">
+            06
+          </div>
+
+          <h3>
+            Agencies & Teams
+          </h3>
+
+          <p>
+            When you need someone to handle the
+            sourcing behind the scenes.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="popup-bottom">
+
+
+        <h3>
+          Something else?
+        </h3>
+
+
+        <p>
+          That's fine too. Tell us what you're trying
+          to get done and we'll work out where to start.
+        </p>
+
+
+        <a
+          class="button"
+          href="https://tally.so/r/rjxZ45"
+          target="_blank"
+          rel="noopener"
+        >
+          Start a requirement
+          <span>↗</span>
+        </a>
+
+
+      </div>
+
 
     </div>
 
 
   </div>
+
 
 </div>
 
@@ -2015,10 +1375,14 @@ footer .footer-logo{
 <script>
 
 
-function openCatalogue(){
+/* =================================
+   POPUP
+================================= */
+
+function openPopup(){
 
   const overlay =
-    document.getElementById("catalogueOverlay");
+    document.getElementById("popupOverlay");
 
   overlay.classList.add("open");
 
@@ -2027,10 +1391,10 @@ function openCatalogue(){
 }
 
 
-function closeCatalogue(){
+function closePopup(){
 
   const overlay =
-    document.getElementById("catalogueOverlay");
+    document.getElementById("popupOverlay");
 
   overlay.classList.remove("open");
 
@@ -2039,14 +1403,14 @@ function closeCatalogue(){
 }
 
 
-function closeCatalogueFromBackground(event){
+function closeFromBackground(event){
 
   if(
     event.target ===
-    document.getElementById("catalogueOverlay")
+    document.getElementById("popupOverlay")
   ){
 
-    closeCatalogue();
+    closePopup();
 
   }
 
@@ -2058,9 +1422,7 @@ document.addEventListener(
   function(event){
 
     if(event.key === "Escape"){
-
-      closeCatalogue();
-
+      closePopup();
     }
 
   }
